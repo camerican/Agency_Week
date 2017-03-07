@@ -21,6 +21,27 @@ var map;
 function initializeMap(location){
     	
     	console.log(location);
+        // show button on initialize
+        // add click handler to send ajax
+        $('#location_save').fadeIn().click(function(event){
+            $.ajax({
+                url: '/map',
+                method: 'POST',
+                data: {
+                    x: location.coords.latitude,
+                    y: location.coords.longitude,
+                    // to do: we need to actually look
+                    // the current_user up; probably via
+                    // erb and @current_user.id
+                    user_id: 1
+                },
+                complete: function(){
+                    $(event.target).fadeOut();
+                }
+            })
+        });
+
+
 
     	var currentLocation = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
 

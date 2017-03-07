@@ -1,0 +1,3 @@
+class Homelesspeople < ApplicationRecord
+
+end

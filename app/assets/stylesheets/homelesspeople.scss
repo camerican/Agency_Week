@@ -3,11 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #map {
-    height: 100%;
-  }
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#location_save {
+	position: fixed;
+	right:20px;
+	bottom: 20px;
+	width: 200px;
+	height: 60px;
+	background-color: #bb7733;
+	cursor: pointer;
+	display: none;
+}
 
